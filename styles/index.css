@@ -1,6 +1,242 @@
-*{
+* {
   margin: 0 auto;
   padding: 0;
   list-style: none;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.limite {
+  min-width: 1080px;
+  max-width: 1080px;
+}
+
+/* TEXTURA */
+
+/* HEADER */
+header {
+  min-height: 500px;
+  max-height: 500px;
+  background-image: url(/img/header-fundo.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+}
+#header{
+  width: 100%;
+  height: 500px;
+  background: rgba(45, 49, 66, 0.857);
+}
+#Navbar-top {
+  min-height: 60px;
+  max-height: 60px;
+}
+
+#Navbar {
+  min-width: 1080px;
+  max-width: 1080px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  align-items: center;
+  min-height: 60px;
+  max-height: 60px;
+}
+
+/* LOGO */
+#logo {
+  margin-left: 0;
+}
+
+#logo h1 {
+  color: white;
+}
+
+/* MENU */
+#menu-right {
+  margin-right: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+#menu-right li {
+  display: block;
+  padding: 10px;
+}
+
+#menu-right li>a {
+  color: white;
+  text-decoration: none;
+}
+
+#menu-right span:nth-child(1) {
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+}
+#menu-right span:nth-child(1):hover {
+  color: white;
+  background-color: #2485d2;
+}
+
+/* =============================== */
+/* =============================== */
+/* HEADER PROGRAMAS SUPORTE REMOTO */
+/* =============================== */
+/* =============================== */
+
+#HeaderSuporte {
+  width: auto;
+  height: auto;
+}
+
+#HeaderSuporteContent {
+  min-height: 440px;
+  max-height: 440px;
+  min-width: 1080px;
+  max-width: 1080px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#headerSLeft {
+  margin-left: 0;
+  position: absolute;
+  z-index: 3;
+  left: 0;
+}
+
+#headerSLeft>li {
+  width: 250px;
+  height: 60px;
+  border-radius: 5px;
+  margin: 10px 0;
+  background-color: #2485d2;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+
+#headerSLeft li>h2 {
+  color: white;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  padding: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#headerSLeft li img {
+  width: 40px;
+  position: absolute;
+  right: 10px;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+
+/* BOX */
+.HeaderSuporteProgramasBox {
+  position: absolute;
+  left: 280px;
+  background-color: #2485d2;
+  width: 250px;
+  height: auto;
+  padding: 10px;
+  border-radius: 10px;
+  /* display: none; */
+}
+.HeaderSuporteProgramasBox li{
+  width: 230px;
+  height: 60px;
+  background-color:#2D3142;
+  margin: 10px 0;
+  border-radius: 4px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.HeaderSuporteProgramasBox li a{
+  color: #fff;
+  text-decoration: none;
+}
+
+/* TEAMVIEWER */
+#HeaderSuporte-TeamViewer{
+  display: none;
+  top: -40px;
+
+}
+#HeaderSuporte-TeamViewer::after{
+  position: absolute;
+  content: '';
+  border-top: 20px solid #2485d2;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  transform: rotate(90deg);
+  left: -25px;
+  top: 75px;
+}
+/* ANYDESK */
+#HeaderSuporte-AnyDesk{
+  display: none;
+  top: 30px;
+
+}
+#HeaderSuporte-AnyDesk::after{
+  position: absolute;
+  content: '';
+  border-top: 20px solid #2485d2;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  transform: rotate(90deg);
+  left: -25px;
+  top: 75px;
+}
+/* AEROADMIN */
+#HeaderSuporte-AeroAdmin{
+  display: none;
+  top: 100px;
+}
+#HeaderSuporte-AeroAdmin::after{
+  position: absolute;
+  content: '';
+  border-top: 20px solid #2485d2;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  transform: rotate(90deg);
+  left: -25px;
+  top: 75px;
+}
+/* FECHA O MENU DOS PROGRAMAS */
+#fecharMenu{
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  right: 0;
+}
+
+
+#headerSRight {
+  margin-right: 0;
+  position: absolute;
+  right: 0;
+  top: 20px;
+}
+/* =============================== */
+/* =============================== */
+/* BARRA INFORMATIVA */
+/* =============================== */
+/* =============================== */
+#barraInformativa{
+  width: 100%;
+  height: 80px;
+  background-color: #2D3142;
 }

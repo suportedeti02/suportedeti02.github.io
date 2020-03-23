@@ -1,0 +1,442 @@
+:root{
+  --top-header: #0f0f0f;
+  --header: #daf7dc;
+  --bottom-header: #0f0f0f;
+  --barra: #9ee493;
+}
+*{
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.limite{
+  max-width: 1080px;
+  min-width: 1080px;
+}
+
+/* HEADER */
+header{
+  height: auto;
+}
+.wrapper-header-nav{
+  background: #2D3142;
+}
+#top-header-nav{
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  align-items: center;
+}
+#logo-top{
+  margin-left: 0;
+}
+#logo-top a{
+  color: #daf7dc;
+  text-shadow: 0 0 3px rgba(0,0,0,.3);
+  text-decoration: none;
+}
+#logo-top a h1{
+  font-size: 30pt;
+  margin: 5px;
+}
+#menu-top-right{
+  margin-right: 0;
+  display: flex;
+  flex-direction: row;
+}
+#menu-top-right a{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #daf7dc;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px 10px;
+}
+.icons-header{
+  max-width: 15px;
+  margin: 0 5px;
+}
+
+#center-header-content{
+  min-height: 500px;
+  background-image: url(/img/header-fundo.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center -60px;
+}
+#center-header-content-opacity{
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* INFORMAÇÕES */
+#suporte{
+  background-color: #2D3142;
+  width: 100%;
+  min-height: 250px;
+  border-top: 2px solid white;
+}
+#suporte-content{
+  display: grid;
+  grid-template-areas: 
+  'h2 h2'
+  's-left s-right'
+  ;
+  color: white;
+  padding: 50px 0 130px 0;
+}
+#suporte-titulo{
+  grid-area: h2;
+  margin: 0 auto;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  font-size: 36px;
+  text-transform: uppercase;
+  transform: rotate(-5deg);
+  margin: 50px 0 100px 0;
+  position: relative;
+}
+#suporte-titulo::after{
+  content: "";
+  width: 2px;
+  height: 120px;
+  background: #fff;
+  display: block;
+  position: absolute;
+  top: -114px;
+  left: 400px;
+  transform: rotate(5deg);
+}
+#suporte-titulo::before{
+  content: "";
+  width: 2px;
+  height: 95px;
+  background: #fff;
+  display: block;
+  position: absolute;
+  top: -90px;
+  right: 400px;
+  transform: rotate(5deg);
+}
+#suporte-titulo h2{
+  width: 400px;
+  font-family: 'teko', Arial, Helvetica, sans-serif;
+  letter-spacing: 7px;
+  border: 2px solid white;
+  border-radius: 10px;
+  background: #49C6E5;
+}
+#suporte-left{
+  grid-area: s-left;
+  margin-left: 0;
+  color: white;
+  align-self: center;
+}
+#suporte-left li{
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 300px;
+  height: 65px;
+  list-style: none;
+  margin: 20px 0;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.584);
+}
+#suporte-left li img{
+  width: 40px;
+  position: absolute;
+  z-index: 9;
+  right: 10px;
+  border-radius: 5px;
+}
+#suporte-left li a{
+  position: absolute;
+  display: block;
+  color: #FFFBFA;
+  background-color: #00BD9D;
+  font-size: 23px;
+  text-decoration: none;
+  padding: 30px 200px 30px 20px;
+  margin-left: 0;
+  z-index: 9;
+}
+#suporte-left li a:hover{
+  background-color: #49C6E5;
+  color: white;
+}
+#suporte-left p{
+  font-size: 13px;
+}
+#suporte-right{
+  grid-area: s-right;
+  align-self: center;
+  margin-right: 0;
+}
+#suporte-right img{
+  margin-right: 0;
+}
+/* INFORMAÇÕES */
+
+/* SECTION tABS */
+#wrapper-nav-tabs{
+  width: 100%;
+}
+.nav_tabs{
+  min-height: 500px;
+  max-height: auto;
+  margin: 0 auto;
+  position: relative;
+  display: grid;
+  margin-top: -73px;
+}
+
+.nav_tabs ul{
+  list-style: none;
+}
+
+.nav_tabs ul li{
+  float: left;
+}
+
+.tab_label{
+  display: block;
+  width: 200px;
+  padding: 25px;
+  font-size: 20px;
+  color:#fff;
+  cursor: pointer;
+  text-align: center;
+  background-color: #49C6E5;
+}
+label[for="tab3"]{
+  border-radius: 0 10px 0 0;
+}
+label[for="tab1"]{
+  border-radius: 10px 0 0 0;
+}
+.nav_tabs .rd_tab { 
+display:none;
+position: absolute;
+}
+/* TAB SELECIONADA */
+.nav_tabs .rd_tab:checked ~ label { 
+background-color: white;
+color:black;
+}
+
+.tab-content{
+background-color: #fff;
+display: none;
+position: absolute;
+width: 100%;
+left: 0;	
+}
+
+.rd_tab:checked ~ .tab-content{
+display: block;
+}
+.rd_tab1:checked ~ .nav_tabs{
+  height: 800px;
+  }
+.tab-content h2{
+padding: 10px;
+color: #87d3b7;
+}
+.tab-content article{
+padding: 10px;
+color: #555;
+}
+
+/* TAB 3 */
+#tab3-box{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#tab3-box a{
+  text-decoration: none;
+}
+#tab3-box a:hover h2{
+  color: #49C6E5;
+}
+#tab3-box-left{
+  margin-left: 0;
+}
+
+#tab3-box-right{
+  margin-right: 0;
+}
+
+
+/* SECTION */
+#content-destaque{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 10px 0;
+}
+.programas{
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  align-content: space-between;
+  gap: 10px;
+  background-color: #daf7dc;
+  border-radius: 3px;
+  box-shadow: 0 0 3px rgba(0,0,0,.5);
+  padding: 10px;
+  text-align: center;
+}
+.programas h2{
+  color: #2D3142;
+}
+.programas img{
+  width: 60px;
+  margin: 10px auto;
+}
+.programas p{
+  max-height: 73px;
+  overflow: hidden;
+}
+.programas a{
+  max-height: 38px;
+  color: white;
+  background: #2D3142;
+  padding: 10px;
+  margin-top: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,.5);
+}
+.programas a:hover{
+  background: #db4c70;
+}
+
+/* SECTION GLOBAL */
+#wrapper-content-global{
+  display: grid;
+  max-width: 1080px;
+  grid-template-columns: 817.5px 262.5px;
+}
+
+/* SIDEBAR */
+
+#sidebar{
+  min-width: 100%;
+  height: 450px;
+  background-color:#daf7dc;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.584);
+  border-radius: 5px;
+}
+
+/* OUTLOOK */
+#outlook-config-imap {
+  width: 817.5px;
+  height: auto;
+  margin-left: 0;
+  padding: 10px 15px 10px 0px;
+  clear: both;
+}
+
+/* Tabela */
+
+#outlook-config-imap table {
+  width: 100%;
+  height: auto;
+  border-spacing: 10px;
+}
+#outlook-config-imap tr td {
+  padding: 10px 20px;
+  background:#daf7dc;
+  box-shadow: 0 0 5px rgba(0,0,0,.3);
+  border-radius: 5px;
+  
+  
+}
+
+#outlook-config-imap h2 {
+  margin: 5px 0px 5px 0px;
+}
+
+#outlook-config-imap ol {
+  margin-left: 25px;
+}
+
+#outlook-config-imap h3 {
+  margin: 10px 0px 10px 0px;
+}
+#oculto-outlook{
+  display: none;
+}
+/* BOTÃO VER MAIS */
+.btn1-ver{
+  display: block;
+  width: 130px;
+  color: white;
+  background: #2D3142;
+  padding: 10px;
+  border-radius: 3px;
+  margin-left: 0;
+  margin-top: 20px;
+  text-align: center;
+  position: relative;
+}
+.button-oculto{
+  display: none;
+}
+#ver-menos-outlook{
+  display: none;
+}
+
+#btn-outlook:checked ~ #oculto-outlook{
+  display: block;
+}
+#btn-outlook:checked ~ #ver-mais-outlook{
+  display: none;
+}
+#btn-outlook:checked ~ #ver-menos-outlook{
+  display: block;
+}
+/* SETA BTN */
+#ver-mais-outlook::after{
+  content: "";
+	position: absolute;
+	top: 15px;
+	left: 20px;
+	transform: rotate(-45deg);
+	width: 0;
+	height: 0;
+	border-top: 30px solid transparent;
+	border-left: 30px solid #2D3142;
+  z-index: -1;
+}
+#ver-menos-outlook::after{
+  content: "";
+	position: absolute;
+	top: -8px;
+	left: 20px;
+	transform: rotate(135deg);
+	width: 0;
+	height: 0;
+	border-top: 30px solid transparent;
+	border-left: 30px solid #2D3142;
+  box-shadow: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+
+/* SIDEBAR */
+
+
+
+/* ULTIMO DO SITE */
+/* FOOTER */
+#wrapper-footer{
+  width: 100%;
+  height: 200px;
+  margin-top: 30px;
+  background-color: #383838;
+}

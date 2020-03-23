@@ -1,12 +1,129 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-5T4ZLQG');
+  </script>
+  <!-- End Google Tag Manager -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/index.css">
-  <title>Suporte</title>
+  <title>Blog | Rafael Goulart</title>
 </head>
+
 <body>
-  
+  <div id="interface">
+    <header>
+      <div id="header">
+        <div id="Navbar-top">
+          <div class="limite">
+            <div id="Navbar">
+              <!-- Logo -->
+              <div id="logo">
+                <h1>WinBox</h1>
+              </div>
+              <!-- Menu -->
+              <div id="menu-right">
+                <li><a href="#">Home</a></li>
+                <li onclick="btnSenha()"><span>Gerador de senhas</span></li>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Fundo MENU -->
+        <div id="textura">
+
+        </div>
+        <div id="textura1">
+
+        </div>
+        <div id="HeaderSuporte">
+          <div class="limite">
+            <div id="HeaderSuporteContent">
+              <li onclick="remover()" id="fecharMenu"></li>
+              <div id="headerSLeft">
+                <li onclick="btnSuporte()">
+                  <h2>Team Viewer</h2>
+                  <img src="img/suporte/teamviewer.png" alt="TeamViewer">
+                </li>
+                <!-- content -->
+                <div class="HeaderSuporteProgramasBox" id="HeaderSuporte-TeamViewer">
+                  <li><a href="#">
+                      <h2>Baixar agora</h2>
+                    </a></li>
+                  <li><a href="#">
+                      <p>Acessar o site</p>
+                    </a></li>
+                </div>
+                <li onclick="btnSuporte1()">
+                  <h2>AnyDesk</h2>
+                  <img src="img/suporte/anydesk.png" alt="AnyDesk">
+                </li>
+                <!-- content -->
+                <div class="HeaderSuporteProgramasBox" id="HeaderSuporte-AnyDesk">
+                  <li><a href="#">
+                      <h2>Baixar agora</h2>
+                    </a></li>
+                  <li><a href="#">
+                      <p>Acessar o site</p>
+                    </a></li>
+                </div>
+                <li onclick="btnSuporte2()">
+                  <h2>AeroAdmin</h2>
+                  <img src="img/suporte/aeroadmin_logo.png" alt="AeroAdmin">
+                </li>
+                <!-- content -->
+                <div class="HeaderSuporteProgramasBox" id="HeaderSuporte-AeroAdmin">
+                  <li><a href="#">
+                      <h2>Baixar agora</h2>
+                    </a></li>
+                  <li><a href="#">
+                      <p>Acessar o site</p>
+                    </a></li>
+                </div>
+              </div>
+              <div id="headerSRight">
+                <img src="img/suporte.png" alt="SuporteRemoto">
+              </div>
+            </div>
+          </div>
+        </div>
+        </svg>
+      </div>
+    </header>
+    <div id="barraInformativa">
+
+    </div>
+    <!-- Content -->
+    <div id="conteudo">
+      <div class="limite">
+        <div id="conteudo-global">
+          <!-- Google Tag Manager (noscript) -->
+          <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5T4ZLQG" height="0" width="0"
+              style="display:none;visibility:hidden"></iframe></noscript>
+          <!-- End Google Tag Manager (noscript) -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- SCRIPTS -->
+  <script src="js/senha/btnSenha.js"></script>
+  <script src="js/suporte/btnSuporte.js"></script>
 </body>
+
 </html>

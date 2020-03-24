@@ -5,7 +5,7 @@ var click1 = window.document.getElementById('HeaderSuporte-AnyDesk');
 var click2 = window.document.getElementById('HeaderSuporte-AeroAdmin');
 
 function btnSuporte() {
-  if (click.style.display == 'none') {
+  if (click.style.display = 'none') {
     click.style.display = 'block';
     click1.style.display = 'none';
     click2.style.display = 'none';
@@ -17,7 +17,7 @@ function btnSuporte() {
 }
 
 function btnSuporte1() {
-  if (click1.style.display == 'none') {
+  if (click1.style.display = 'none') {
     click.style.display = 'none';
     click1.style.display = 'block';
     click2.style.display = 'none';
@@ -29,7 +29,7 @@ function btnSuporte1() {
 }
 
 function btnSuporte2() {
-  if (click2.style.display == 'none') {
+  if (click2.style.display = 'none') {
     click.style.display = 'none';
     click1.style.display = 'none';
     click2.style.display = 'block';

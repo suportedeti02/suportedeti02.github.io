@@ -8,7 +8,7 @@
   <title>Blog | Rafael Goulart</title>
 </head>
 
-<body>
+<body onload="btnSuporteTeamViewer(), btnSuporteAnyDesk(), btnSuporteAeroAdmin()">
   <div id="interface">
     <header>
       <div id="header">
@@ -17,7 +17,7 @@
             <div id="Navbar">
               <!-- Logo -->
               <div id="logo">
-                <h1>WinBox</h1>
+                <a href="index.html"><img src="/img/Logo.png" alt="LOGO"></a>
               </div>
               <!-- Menu -->
               <div id="menu-right">
@@ -27,60 +27,55 @@
             </div>
           </div>
         </div>
-        <!-- Fundo MENU -->
-        <div id="textura">
-
-        </div>
-        <div id="textura1">
-
-        </div>
         <div id="HeaderSuporte">
+          <!-- usado para fechar o menu suporte ao clicar -->
+          <li onclick="remover()" id="fecharMenu"></li>
+          <!-- usado para fechar o menu suporte ao clicar -->
           <div class="limite">
             <div id="HeaderSuporteContent">
-              <li onclick="remover()" id="fecharMenu"></li>
               <div id="headerSLeft">
-                <li onclick="btnSuporte()">
+                <li onclick="btnSuporteTeamViewer()">
                   <h2>Team Viewer</h2>
                   <img src="img/suporte/teamviewer.png" alt="TeamViewer">
                 </li>
                 <!-- content -->
                 <div class="HeaderSuporteProgramasBox" id="HeaderSuporte-TeamViewer">
-                  <li><a href="#">
+                  <li><a href="https://www.teamviewer.com/pt-br/download-automatico-do-teamviewer/">
                       <h2>Baixar agora</h2>
                     </a></li>
-                  <li><a href="#">
+                  <li><a href="https://www.teamviewer.com/pt-br/" target="_blank">
                       <p>Acessar o site</p>
                     </a></li>
                 </div>
-                <li onclick="btnSuporte1()">
+                <li onclick="btnSuporteAnyDesk()">
                   <h2>AnyDesk</h2>
                   <img src="img/suporte/anydesk.png" alt="AnyDesk">
                 </li>
                 <!-- content -->
                 <div class="HeaderSuporteProgramasBox" id="HeaderSuporte-AnyDesk">
-                  <li><a href="#">
+                  <li><a href="https://download.anydesk.com/AnyDesk.exe">
                       <h2>Baixar agora</h2>
                     </a></li>
-                  <li><a href="#">
+                  <li><a href="https://anydesk.com/pt/downloads/windows" target="_blank">
                       <p>Acessar o site</p>
                     </a></li>
                 </div>
-                <li onclick="btnSuporte2()">
+                <li onclick="btnSuporteAeroAdmin()">
                   <h2>AeroAdmin</h2>
                   <img src="img/suporte/aeroadmin_logo.png" alt="AeroAdmin">
                 </li>
                 <!-- content -->
                 <div class="HeaderSuporteProgramasBox" id="HeaderSuporte-AeroAdmin">
-                  <li><a href="#">
+                  <li><a href="https://ulm.aeroadmin.com/AeroAdmin.exe">
                       <h2>Baixar agora</h2>
                     </a></li>
-                  <li><a href="#">
+                  <li><a href="https://www.aeroadmin.com/pt/index.html" target="_blank">
                       <p>Acessar o site</p>
                     </a></li>
                 </div>
               </div>
               <div id="headerSRight">
-                <img src="img/suporte.png" alt="SuporteRemoto">
+                <img src="img/suporte-notebook.png" alt="SuporteRemoto">
               </div>
             </div>
           </div>
@@ -91,7 +86,63 @@
     <div id="barraInformativa">
 
     </div>
+    <!-- Content -->
+    <div id="destaque">
+      <div class="limite">
+        <div id="destaque-box">
+          <div class="box-destaque">
+            <span class="destaque-img">
+              <img src="/img/Card/programas.png" alt="Programas">
+            </span>
+            <span class="destaque-titulo">
+              <h3>Programas</h3>
+            </span>
+            <span class="destaque-saiba-mais">
+              <a href="#">Saiba mais</a>
+            </span>
+          </div>
+          <!-- box 2 -->
+          <div class="box-destaque">
+            <span class="destaque-img">
+              <img src="/img/Card/dicas.png" alt="Programas">
+            </span>
+            <span class="destaque-titulo">
+              <h3>Dicas</h3>
+            </span>
+            <span class="destaque-saiba-mais">
+              <a href="#">Saiba mais</a>
+            </span>
+          </div>
+          <!-- box 3 -->
+          <div class="box-destaque">
+            <span class="destaque-img">
+              <img src="/img/Card/driver.png" alt="Programas">
+            </span>
+            <span class="destaque-titulo">
+              <h3>Drivers</h3>
+            </span>
+            <span class="destaque-saiba-mais">
+              <a href="#">Saiba mais</a>
+            </span>
+          </div>
+          <!-- box 4 -->
+          <div class="box-destaque">
+            <span class="destaque-img">
+              <img src="/img/Card/suporte.png" alt="Programas">
+            </span>
+            <span class="destaque-titulo">
+              <h3>Suporte</h3>
+            </span>
+            <span class="destaque-saiba-mais">
+              <a href="#">Saiba mais</a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+  <!-- Content -->
+  </!DOCTYPE>
   <!-- SCRIPTS -->
   <script src="js/senha/btnSenha.js"></script>
   <script src="js/suporte/btnSuporte.js"></script>

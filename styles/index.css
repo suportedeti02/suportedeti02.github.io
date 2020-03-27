@@ -2,6 +2,8 @@
   margin: 0 auto;
   padding: 0;
   list-style: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -15,22 +17,21 @@
 
 /* HEADER */
 header {
-  min-height: 500px;
-  max-height: 500px;
+  min-height: 550px;
+  max-height: 550px;
   background-image: url(/img/header-fundo.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 0;
 }
-#header{
+
+#header {
   width: 100%;
-  height: 500px;
+  height: 550px;
   background: rgba(45, 49, 66, 0.857);
 }
-#Navbar-top {
-  min-height: 60px;
-  max-height: 60px;
-}
+
+#Navbar-top {}
 
 #Navbar {
   min-width: 1080px;
@@ -38,8 +39,10 @@ header {
   display: grid;
   grid-template-columns: repeat(2, auto);
   align-items: center;
-  min-height: 60px;
-  max-height: 60px;
+  min-height: auto;
+  max-height: auto;
+  height: 80px;
+  margin-bottom: 20px;
 }
 
 /* LOGO */
@@ -47,8 +50,10 @@ header {
   margin-left: 0;
 }
 
-#logo h1 {
-  color: white;
+#logo img {
+  width: 200px;
+  filter: invert(100);
+  margin-top: 5px;
 }
 
 /* MENU */
@@ -75,6 +80,7 @@ header {
   padding: 10px;
   border-radius: 5px;
 }
+
 #menu-right span:nth-child(1):hover {
   color: white;
   background-color: #2485d2;
@@ -92,8 +98,8 @@ header {
 }
 
 #HeaderSuporteContent {
-  min-height: 440px;
-  max-height: 440px;
+  min-height: 450px;
+  max-height: 450px;
   min-width: 1080px;
   max-width: 1080px;
   position: relative;
@@ -114,7 +120,7 @@ header {
   height: 60px;
   border-radius: 5px;
   margin: 10px 0;
-  background-color: #2485d2;
+  background: linear-gradient(150deg,#386FA4,#84D2F6);
   position: relative;
   display: flex;
   flex-direction: row;
@@ -144,17 +150,29 @@ header {
 .HeaderSuporteProgramasBox {
   position: absolute;
   left: 280px;
-  background-color: #2485d2;
+  background: linear-gradient(150deg,#84D2F6,#386FA4);
   width: 250px;
   height: auto;
-  padding: 10px;
+  padding: 0 10px;
   border-radius: 10px;
   /* display: none; */
 }
-.HeaderSuporteProgramasBox li{
+
+.HeaderSuporteProgramasBox::after {
+  position: absolute;
+  content: '';
+  border-top: 20px solid rgb(113, 183, 216);
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  transform: rotate(90deg);
+  left: -25px;
+  top: 65px;
+}
+
+.HeaderSuporteProgramasBox li {
   width: 230px;
   height: 60px;
-  background-color:#2D3142;
+  background-color: #2D3142;
   margin: 10px 0;
   border-radius: 4px;
   display: grid;
@@ -162,64 +180,41 @@ header {
   justify-content: center;
   cursor: pointer;
 }
-.HeaderSuporteProgramasBox li a{
+.HeaderSuporteProgramasBox li:hover{
+  box-shadow: 0 0 20px -8px inset;
+}
+.HeaderSuporteProgramasBox li a {
   color: #fff;
   text-decoration: none;
 }
 
 /* TEAMVIEWER */
-#HeaderSuporte-TeamViewer{
+#HeaderSuporte-TeamViewer {
   display: none;
-  top: -40px;
+  top: -35px;
 
 }
-#HeaderSuporte-TeamViewer::after{
-  position: absolute;
-  content: '';
-  border-top: 20px solid #2485d2;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  transform: rotate(90deg);
-  left: -25px;
-  top: 75px;
-}
+
 /* ANYDESK */
-#HeaderSuporte-AnyDesk{
+#HeaderSuporte-AnyDesk {
   display: none;
-  top: 30px;
+  top: 35px;
 
 }
-#HeaderSuporte-AnyDesk::after{
-  position: absolute;
-  content: '';
-  border-top: 20px solid #2485d2;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  transform: rotate(90deg);
-  left: -25px;
-  top: 75px;
-}
+
 /* AEROADMIN */
-#HeaderSuporte-AeroAdmin{
+#HeaderSuporte-AeroAdmin {
   display: none;
-  top: 100px;
+  top: 105px;
 }
-#HeaderSuporte-AeroAdmin::after{
-  position: absolute;
-  content: '';
-  border-top: 20px solid #2485d2;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  transform: rotate(90deg);
-  left: -25px;
-  top: 75px;
-}
+
 /* FECHA O MENU DOS PROGRAMAS */
-#fecharMenu{
+#fecharMenu {
   position: absolute;
   z-index: 2;
   width: 100%;
-  height: 100%;
+  height: 470px;
+  top: 80px;
   right: 0;
 }
 
@@ -230,13 +225,74 @@ header {
   right: 0;
   top: 20px;
 }
+
+#headerSRight>img {
+  width: 470px;
+}
+
 /* =============================== */
 /* =============================== */
 /* BARRA INFORMATIVA */
 /* =============================== */
 /* =============================== */
-#barraInformativa{
+#barraInformativa {
   width: 100%;
   height: 80px;
   background-color: #2D3142;
+}
+/* CONTENT DESTAQUE */
+
+#destaque-box{
+  min-width: 1080px;
+  max-width: 1080px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+/* CARD BOX */
+.box-destaque{
+  min-width: 262.5px;
+  max-width: 262.5px;
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  justify-items: center;
+  background: linear-gradient(180deg, #386FA4, #91E5F6);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px gray;
+}
+.box-destaque span{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+/* IMG */
+.destaque-img{
+  min-height: 100px;
+  max-height: 100px;
+}
+/* TITULO */
+.destaque-titulo{
+  min-height: 50px;
+  max-height: 50px;
+  margin-bottom: 10px;
+}
+.destaque-titulo h3{
+  color: #2D3142;
+  font-size: 14pt;
+  text-transform: uppercase;
+}
+.destaque-img img{
+  width: 80px;
+}
+/* BTN SAIBA MAIS */
+.destaque-saiba-mais a{
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px 18px;
+  background-color: #2D3142;
+  border-radius: 3px;
+  display: block;
 }
